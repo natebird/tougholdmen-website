@@ -1,10 +1,17 @@
 # Tough Old Men
 
-Static recreation of tougholdmen.com from Wayback Machine captures (Sept 2014 where available).
+Static site for tougholdmen.com (Option B, "Field Guide"), deployed to GitHub Pages by `.github/workflows/pages.yml`.
 
-- `site/` — the published site (deployed to GitHub Pages by `.github/workflows/pages.yml`)
-- `source/raw/` — unmodified archived HTML; `source/build.py` regenerates the pages in `site/` from it
-- Rebuild: `python3 -I source/build.py`
+- `site/` — the published site: plain HTML and one stylesheet (`assets/css/site.css`), no build step
+- `site/assets/` — `css/`, `js/` (menu toggle, join-form mailto), `fonts/`, `img/`, `logo/`
+- `source/raw/` — archived Wayback Machine HTML of the original 2014 site (reference only; the old build script was removed because it would overwrite the redesigned pages)
+- `prototypes/` — the three design concepts (A Summit, B Field Guide, C Poster) used to choose the direction
 - Preview: `python3 -m http.server 8765 -d site`
 
-Fonts are free stand-ins for the original Typekit fonts: Figtree (Proxima Nova) and League Gothic (Alternate Gothic No. 2).
+Pages keep their original URLs (`/adventure-story/`, `/join/`, `/contact/`, `/privacy-policy/`, `/terms-of-use/`) and add `/adventures/`, `/events/`, `/salute/`. There is no store at launch.
+
+## Before launch
+
+- Fonts are free stand-ins: League Gothic (for Trade Gothic) and Figtree (for Gotham). License web versions of the real fonts.
+- `/events/` and `/salute/` contain sample placeholder slots.
+- The Join form opens an email to tom@tougholdmen.com; swap in a form service when one is chosen.

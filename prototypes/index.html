@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TOM Website Prototypes</title>
+<link rel="icon" href="assets/logo/favicon-32x32.png">
+<link rel="stylesheet" href="assets/css/base.css">
+<style>
+body{background:var(--limestone);color:var(--slate)}
+header{background:var(--slate);color:var(--limestone);padding-block:40px}
+header h1{font-size:clamp(3rem,8vw,6rem)}header p{max-width:36em;opacity:.85;margin:.8em 0 0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding-block:48px}
+.c{border:3px solid var(--slate);background:#fff;display:flex;flex-direction:column}
+.c .sw{height:130px;display:flex}.c .sw i{flex:1}
+.c .b{padding:22px;display:flex;flex-direction:column;gap:.6em;flex:1}
+.c h2{font-size:2.6rem}.c p{margin:0}
+.c .links{margin-top:auto;display:flex;gap:10px;flex-wrap:wrap;padding-top:12px}
+.c a{font-family:var(--display);text-transform:uppercase;letter-spacing:.08em;font-size:1.25rem;text-decoration:none;padding:.35em 1em;border:3px solid var(--slate)}
+.c a:first-child{background:var(--slate);color:var(--limestone)}.c a:hover{background:var(--firecracker);color:var(--ink);border-color:var(--slate)}
+h3.s{font-size:2.4rem;margin:0 0 .5em}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:40px;padding-bottom:64px}
+.cols ul{display:grid;gap:.5em;padding-left:1.1em;list-style:disc}
+@media(max-width:860px){.cards,.cols{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><h1>Tough Old Men<br>Website prototypes</h1><p>Three directions built from the brand guide (Slate, Firecracker, Limestone, plus Ale, Lawn, Dusk and Rust). All static HTML/CSS, responsive from phone to desktop. Open each on a phone and a laptop.</p></div></header>
+<main class="wrap">
+  <div class="cards">
+    <article class="c"><div class="sw"><i style="background:#404041"></i><i style="background:#F2732E"></i><i style="background:#F2F1E6"></i></div><div class="b"><h2>A · Summit</h2><p>Dark Slate, full-bleed black-and-white photography, Firecracker as the spark. Editorial and serious: the “respect the outdoors” take.</p><div class="links"><a href="a-summit/index.html">Home</a><a href="a-summit/story.html">Our Story</a></div></div></article>
+    <article class="c"><div class="sw"><i style="background:#F2F1E6"></i><i style="background:#F1B81B"></i><i style="background:#61794B"></i><i style="background:#5A5967"></i><i style="background:#D1502C"></i></div><div class="b"><h2>B · Field Guide</h2><p>Limestone paper, hexagon patches, and the secondary colors as activity badges. Friendly and collectible, like a merit-badge book.</p><div class="links"><a href="b-fieldguide/index.html">Home</a><a href="b-fieldguide/story.html">Our Story</a></div></div></article>
+    <article class="c"><div class="sw"><i style="background:#F2732E"></i><i style="background:#2B2B2C"></i><i style="background:#F1B81B"></i></div><div class="b"><h2>C · Poster</h2><p>Firecracker-forward, giant condensed type, hard shadows, polaroids and stickers. Loud, funny, and impossible to miss.</p><div class="links"><a href="c-poster/index.html">Home</a><a href="c-poster/adventures.html">Adventures</a><a href="c-poster/story.html">Story</a></div></div></article>
+  </div>
+  <div class="cols">
+    <div><h3 class="s">Proposed site map</h3><ul>
+      <li><b>Home</b>: manifesto, what we do, latest adventure, join</li>
+      <li><b>Our Story</b>: Barron &amp; Rob, expanded into long-form</li>
+      <li><b>Adventures</b> (new): member stories and event recaps</li>
+      <li><b>Events</b> (new): simple upcoming calendar</li>
+      <li><b>Salute</b> (new): featured Tough Old Men</li>
+      <li><b>Join</b> and <b>Contact</b>: email signup, stories, sponsors</li>
+      <li>Terms of Use, Privacy Policy</li></ul></div>
+    <div><h3 class="s">Notes</h3><ul>
+      <li>No shop or gear in these prototypes, per launch plan.</li>
+      <li>Fonts are free stand-ins: League Gothic for Trade Gothic (headers, caps) and Figtree for Gotham (body). License web versions before launch.</li>
+      <li>Events marked “Sample” are placeholders. Join forms open an email until a form service is chosen.</li>
+      <li>Firecracker is used with dark text, since light text on it is low-contrast.</li>
+      <li>The guide prints Lawn as #614B79, which looks like swapped values; #61794B is used.</li></ul></div>
+  </div>
+</main>
+</body>
+</html>

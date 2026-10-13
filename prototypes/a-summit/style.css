@@ -1,0 +1,104 @@
+/* Concept A — SUMMIT: dark Slate, photographic, editorial. Firecracker used sparingly as the spark. */
+body{background:var(--slate);color:var(--limestone)}
+.eyebrow{font-family:var(--display);text-transform:uppercase;letter-spacing:.14em;font-size:1.15rem;color:var(--firecracker);margin-bottom:.6em;display:flex;align-items:center;gap:.7em}
+.eyebrow::before{content:"";width:2.2em;height:3px;background:currentColor}
+/* Header */
+.site-header{position:sticky;top:0;z-index:50;background:rgba(47,47,48,.94);backdrop-filter:blur(8px);border-bottom:1px solid rgba(242,241,230,.12)}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;height:88px}
+.brand img{height:50px;width:auto;max-width:none;flex-shrink:0}
+.nav{display:flex;gap:clamp(18px,3vw,36px);align-items:center}
+.nav a{font-family:var(--display);text-transform:uppercase;letter-spacing:.08em;font-size:1.25rem;text-decoration:none;padding:.3em 0;border-bottom:3px solid transparent}
+.nav a:hover,.nav a[aria-current]{border-color:var(--firecracker)}
+.nav .cta{background:var(--firecracker);color:var(--ink);padding:.35em 1em;border:0}
+.nav .cta:hover{background:var(--limestone)}
+@media (max-width:860px){
+  .site-header .wrap{height:72px}.brand img{height:38px}
+  .nav{position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:stretch;gap:0;background:var(--slate-deep);padding:8px var(--gutter) 20px;display:none;border-bottom:3px solid var(--firecracker)}
+  .nav.open{display:flex}
+  .nav a{font-size:1.6rem;padding:.55em 0;border-bottom:1px solid rgba(242,241,230,.12)}
+  .nav .cta{text-align:center;margin-top:14px}
+}
+/* Buttons */
+.btn{display:inline-block;font-family:var(--display);text-transform:uppercase;letter-spacing:.08em;font-size:1.35rem;padding:.65em 1.5em;text-decoration:none;background:var(--firecracker);color:var(--ink);border:2px solid var(--firecracker);transition:background .15s,color .15s}
+.btn:hover{background:var(--limestone);border-color:var(--limestone)}
+.btn.ghost{background:transparent;color:var(--limestone);border-color:rgba(242,241,230,.6)}
+.btn.ghost:hover{background:var(--limestone);color:var(--ink)}
+/* Hero */
+.hero{position:relative;min-height:clamp(560px,90vh,860px);display:grid;align-items:end;isolation:isolate;overflow:hidden}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 40%;z-index:-2;transform:scaleX(-1)}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(64,64,65,.15) 0%,rgba(64,64,65,.35) 45%,var(--slate) 100%),linear-gradient(90deg,rgba(47,47,48,.7),transparent 65%)}
+.hero .wrap{padding-bottom:clamp(40px,9vh,96px);padding-top:120px}
+.hero h1{font-size:clamp(4rem,13vw,10.5rem);max-width:9ch;line-height:.88}
+.hero h1 em{font-style:normal;color:var(--firecracker)}
+.hero .lead{max-width:34em;font-size:clamp(1.1rem,2vw,1.35rem);margin:1.2em 0 1.6em}
+.hero .actions{display:flex;gap:14px;flex-wrap:wrap}
+.hero .credit{position:absolute;right:var(--gutter);bottom:14px;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;opacity:.6}
+/* Ticker */
+.ticker{background:var(--firecracker);color:var(--ink);overflow:hidden;white-space:nowrap;border-block:3px solid var(--ink)}
+.ticker div{display:inline-flex;gap:1.2em;padding:.35em 0;animation:tick 38s linear infinite;font-family:var(--display);font-size:1.9rem;text-transform:uppercase;letter-spacing:.06em}
+.ticker span::after{content:"\2B22";margin-left:1.2em;font-size:.7em;vertical-align:.12em}
+@keyframes tick{to{transform:translateX(-50%)}}
+/* Sections */
+section{padding-block:clamp(56px,9vw,120px)}
+.deep{background:var(--slate-deep)}
+.sec-title{font-size:clamp(2.8rem,7vw,5.5rem);margin-bottom:.5em}
+/* Manifesto */
+.manifesto{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,4vw,56px);margin-top:48px}
+.manifesto li{border-top:3px solid var(--firecracker);padding-top:18px}
+.manifesto b{font-family:var(--display);font-weight:400;font-size:4rem;line-height:1;color:var(--firecracker);display:block}
+.manifesto p{font-size:1.25rem;margin:.3em 0 0}
+.manifesto strong{display:block;font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:2.4rem;line-height:1;margin-top:.3em;letter-spacing:.01em}
+@media (max-width:760px){.manifesto{grid-template-columns:1fr}}
+/* Brotherhood split */
+.split{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(28px,6vw,88px);align-items:center}
+.split .copy p{font-size:1.15rem;max-width:36em}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.chips li{font-family:var(--display);text-transform:uppercase;letter-spacing:.07em;font-size:1.25rem;padding:.25em .8em;border:2px solid rgba(242,241,230,.5)}
+.chips li:last-child{border-color:var(--firecracker);color:var(--firecracker)}
+.frame{position:relative}
+.frame img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.frame::after{content:"";position:absolute;inset:18px -18px -18px 18px;border:3px solid var(--firecracker);z-index:-1}
+.frame{z-index:0;isolation:isolate}
+@media (max-width:860px){.split{grid-template-columns:1fr}.frame::after{inset:12px -10px -12px 10px}}
+/* Feature rows */
+.news{display:grid;grid-template-columns:1fr 1fr;gap:0;background:var(--slate-deep)}
+.news img{width:100%;height:100%;min-height:320px;object-fit:cover}
+.news .txt{padding:clamp(28px,6vw,80px);align-self:center}
+.news h3{font-size:clamp(2.4rem,5vw,4rem);margin:.2em 0 .4em}
+.news time{font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;opacity:.7}
+.text-link{font-family:var(--display);text-transform:uppercase;letter-spacing:.08em;font-size:1.3rem;color:var(--firecracker);text-decoration:none;border-bottom:2px solid currentColor}
+.text-link:hover{color:var(--limestone)}
+@media (max-width:760px){.news{grid-template-columns:1fr}.news img{min-height:0;aspect-ratio:3/2}}
+/* Quote */
+.quote{background:var(--firecracker);color:var(--ink);text-align:center}
+.quote blockquote{margin:0;font-family:var(--display);text-transform:uppercase;font-size:clamp(2.4rem,6.4vw,5.4rem);line-height:.95;max-width:18em;margin-inline:auto}
+.quote cite{display:block;margin-top:1.2em;font-style:normal;font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:.9rem}
+/* Join */
+.join{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,6vw,80px);align-items:center}
+.join-form{display:grid;gap:16px}
+.join-form input{background:rgba(242,241,230,.06)}
+.join-form .btn{cursor:pointer;font-family:var(--display)}
+@media (max-width:860px){.join{grid-template-columns:1fr}}
+/* Footer */
+footer{background:var(--slate-deep);padding-block:48px 32px;border-top:1px solid rgba(242,241,230,.12)}
+footer .row{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap}
+footer .sym{width:64px;height:64px;color:var(--firecracker)}
+footer ul{display:grid;gap:.4em}
+footer h4{font-size:1.3rem;color:var(--firecracker);margin-bottom:.5em;letter-spacing:.08em}
+footer a{text-decoration:none;opacity:.85}footer a:hover{opacity:1;text-decoration:underline}
+footer small{display:block;margin-top:32px;opacity:.6}
+/* Story page */
+.page-hero{padding-block:clamp(56px,10vw,130px) clamp(32px,5vw,56px)}
+.page-hero h1{font-size:clamp(4rem,12vw,9rem);max-width:10ch}
+.page-hero p{font-size:1.3rem;max-width:30em}
+.story{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:clamp(32px,6vw,88px);align-items:start}
+.story article p{font-size:1.2rem;line-height:1.75;max-width:38em}
+.story article p:first-of-type::first-letter{font-family:var(--display);font-size:5.4em;float:left;line-height:.8;padding:.06em .1em 0 0;color:var(--firecracker)}
+.pull{margin:2em 0;padding:.2em 0 .2em 1em;border-left:6px solid var(--firecracker);font-family:var(--display);text-transform:uppercase;font-size:clamp(2.2rem,5vw,3.6rem);line-height:1}
+.story aside{position:sticky;top:96px}
+.story aside img{width:100%;border:4px solid var(--limestone)}
+.story aside figcaption{font-size:.9rem;opacity:.75;margin-top:.7em}
+.timeline{margin-top:32px;border-left:3px solid var(--firecracker);padding-left:20px;display:grid;gap:20px}
+.timeline b{font-family:var(--display);font-weight:400;font-size:2rem;color:var(--firecracker);display:block;line-height:1}
+.timeline span{font-size:.95rem}
+@media (max-width:900px){.story{grid-template-columns:1fr}.story aside{position:static;order:-1}}
