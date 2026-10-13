@@ -116,11 +116,13 @@
       <h2>Join the brotherhood</h2>
       <p style="font-size:1.15rem">Stay in the know: where to find us next, and other cool stuff. We will never give or sell your info.</p>
     </div>
-    <form class="join-form">
-      <div><label for="n">Name</label><input id="n" name="name" autocomplete="name" required></div>
+    <form class="join-form" action="https://buttondown.com/api/emails/embed-subscribe/tougholdmen" method="post">
+      <input type="hidden" name="tag" value="website">
+      <div><label for="n">Name</label><input id="n" name="metadata__name" autocomplete="name" required></div>
       <div><label for="e">Email</label><input id="e" name="email" type="email" autocomplete="email" required></div>
-      <div><label for="z">Postal code</label><input id="z" name="zip" autocomplete="postal-code"></div>
+      <div><label for="z">Postal code <span style="opacity:.7;text-transform:none;letter-spacing:0;font-family:var(--body);font-size:.85rem">(optional, helps us plan local events)</span></label><input id="z" name="metadata__postal-code" autocomplete="postal-code" inputmode="text"></div>
       <button class="btn" type="submit">You’re in, brother</button>
+      <p class="form-note" style="margin:0">We’ll email you a link to confirm. Your details are stored with Buttondown, the service that sends our emails, and are never sold or shared. Unsubscribe anytime. <a href="/privacy-policy/"><u>Privacy policy</u></a></p>
     </form>
   </div>
 </section>

@@ -35,7 +35,14 @@
 <main id="main">
 <div class="wrap page-title"><p class="kicker">Stay a while</p><h1>Join the brotherhood</h1><p>Hear where we’ll be next, and what else we’re cooking up. We still have more features to add to this site, and you’ll be the first to know.</p></div>
 <section style="padding-top:0"><div class="wrap two">
- <div class="formcard"><form class="join-form"><div><label for="n">Name</label><input id="n" name="name" autocomplete="name" required></div><div><label for="e">Email</label><input id="e" name="email" type="email" autocomplete="email" required></div><div><label for="z">Postal code</label><input id="z" name="zip" autocomplete="postal-code"></div><button class="btn orange" type="submit">You’re in, brother</button><p class="form-note" style="margin:0">Opens an email to tom@tougholdmen.com. We will never give or sell your info to other people or companies. It will be kept private.</p></form></div>
+ <div class="formcard"><form class="join-form" action="https://buttondown.com/api/emails/embed-subscribe/tougholdmen" method="post">
+      <input type="hidden" name="tag" value="website">
+      <div><label for="n">Name</label><input id="n" name="metadata__name" autocomplete="name" required></div>
+      <div><label for="e">Email</label><input id="e" name="email" type="email" autocomplete="email" required></div>
+      <div><label for="z">Postal code <span style="opacity:.7;text-transform:none;letter-spacing:0;font-family:var(--body);font-size:.85rem">(optional, helps us plan local events)</span></label><input id="z" name="metadata__postal-code" autocomplete="postal-code" inputmode="text"></div>
+      <button class="btn orange" type="submit">You’re in, brother</button>
+      <p class="form-note" style="margin:0">We’ll email you a link to confirm. Your details are stored with Buttondown, the service that sends our emails, and are never sold or shared. Unsubscribe anytime. <a href="/privacy-policy/"><u>Privacy policy</u></a></p>
+    </form></div>
  <div style="text-align:center"><img src="/assets/logo/TOM_LogoPrimary_Web.Screen.png" alt="Tough Old Men badge" width="332" height="384" style="width:min(260px,70%);margin-inline:auto"></div>
 </div></section>
 </main>

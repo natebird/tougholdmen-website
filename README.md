@@ -14,4 +14,4 @@ Pages keep their original URLs (`/adventure-story/`, `/join/`, `/contact/`, `/pr
 
 - Fonts are free stand-ins: League Gothic (for Trade Gothic) and Figtree (for Gotham). License web versions of the real fonts.
 - `/events/` and `/salute/` contain sample placeholder slots.
-- The Join form opens an email to tom@tougholdmen.com; swap in a form service when one is chosen.
+- The Join form posts to Buttondown (list: tougholdmen) with name and postal code saved as subscriber metadata. Confirm in Buttondown that open and click tracking are off.
