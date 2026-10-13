@@ -1,0 +1,4 @@
+/* Free stand-ins for the original Typekit fonts, aliased to the original family names
+   so site.css works unchanged. Proxima Nova -> Figtree; Alternate Gothic No. 2 -> League Gothic. */
+@font-face{font-family:'proxima-nova';font-style:normal;font-weight:100 900;font-display:swap;src:url('/assets/fonts/Figtree-latin.woff2') format('woff2')}
+@font-face{font-family:'alternate-gothic-no-2-d';font-style:normal;font-weight:400;font-display:swap;src:url('/assets/fonts/LeagueGothic-latin.woff2') format('woff2')}
